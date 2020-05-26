@@ -26,8 +26,13 @@
 }
 
 .home__name--last {
-  color: #ff652f;
-  font-weight: 700;
+  color: #ff0800;
+  font-weight: 100;
+}
+
+.home__title--2nd {
+  color: #ff0800;
+  font-weight: 100;
 }
 
 .menu-btn {
@@ -38,8 +43,8 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .menu-btn__burger {
@@ -49,8 +54,8 @@
   width: 28px;
   height: 3px;
   background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .menu-btn__burger::before {
@@ -60,8 +65,8 @@
   width: 28px;
   height: 3px;
   background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .menu-btn__burger::after {
@@ -70,9 +75,9 @@
   top: 8px;
   width: 20px;
   height: 3px;
-  background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  background: #ff0800;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .menu-btn__burger.open {
@@ -84,6 +89,7 @@
 .menu-btn__burger.open::before {
   -webkit-transform: rotate(45deg) translate(5px, 8px);
           transform: rotate(45deg) translate(5px, 8px);
+  background: #ff0800;
 }
 
 .menu-btn__burger.open::after {
@@ -97,6 +103,7 @@
   top: 0;
   left: 0;
   width: 100vw;
+  height: 10vw;
   opacity: 0.98;
   visibility: hidden;
 }
@@ -126,8 +133,8 @@
   padding-right: 1rem;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .nav .menu-nav.open {
@@ -138,8 +145,8 @@
 .nav .menu-nav__item {
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .nav .menu-nav__item.open {
@@ -148,7 +155,7 @@
 }
 
 .nav .menu-nav__item.active > a {
-  color: #ff652f;
+  color: #ff0800;
 }
 
 .nav .menu-nav__link {
@@ -157,12 +164,12 @@
   text-transform: uppercase;
   padding: 2rem 0;
   font-weight: 300;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .nav .menu-nav__link:hover {
-  color: #ff652f;
+  color: #ff0800;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -236,7 +243,7 @@
 .about .jobs__job {
   background: #414141;
   padding: 0.5rem;
-  border-bottom: 5px solid #ff652f;
+  border-bottom: 5px solid #ff0800;
 }
 
 .about .jobs__job h2, .about .jobs__job h3 {
@@ -245,6 +252,10 @@
 
 .about .jobs__job h6 {
   margin: 0.3rem 0;
+}
+
+.about .jobs__job li {
+  margin: 0.5rem 1rem;
 }
 
 .about .social-icons {
@@ -294,7 +305,7 @@
 
 .projects__items {
   width: 60vw;
-  margin: 2rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -304,7 +315,7 @@
 
 .projects__item {
   position: relative;
-  border-bottom: 5px solid #ff652f;
+  border-bottom: 1px solid #ff0800;
   overflow: hidden;
   cursor: pointer;
 }
@@ -320,15 +331,19 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: #ff652f;
+  background: #ff0800;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .projects__item:hover::after {
   top: 0;
   opacity: 0.9;
+}
+
+.projects__item:hover .projects__ongoing {
+  opacity: 1;
 }
 
 .projects__item:hover .projects__btn {
@@ -354,12 +369,23 @@
 .projects__btn {
   opacity: 0;
   color: #000;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .projects__btn:hover {
   color: #fff;
+}
+
+.projects__ongoing {
+  opacity: 0;
+  color: #000;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.projects__ongoing:hover {
+  color: #000;
 }
 
 .projects .social-icons {
@@ -397,6 +423,7 @@
 }
 
 .contact h2 {
+  color: #ff0800;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
@@ -413,6 +440,11 @@
 .contact .social-icons {
   position: initial;
   margin-top: 2rem;
+}
+
+.contact__info {
+  color: #ff0800;
+  padding-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -491,7 +523,7 @@ a {
 }
 
 .text-secondary {
-  color: #ff652f;
+  color: #ff0800;
 }
 
 header {
@@ -513,13 +545,59 @@ main .social-icons {
 }
 
 main .social-icons a {
-  padding: 0.4rem;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.01s ease-in-out;
+  transition: all 0.01s ease-in-out;
+  position: relative;
+  -webkit-animation: none;
+          animation: none;
 }
 
-main .social-icons a:hover {
-  color: #ff652f;
+main .social-icons a .fa-twitter {
+  padding: 0.1rem;
+}
+
+main .social-icons a .fa-twitter:hover {
+  color: transparent;
+  background-image: url("../img/twitter-bird-sprite.png");
+  background-size: 400%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  -webkit-animation: fly 0.6s steps(4) infinite;
+          animation: fly 0.6s steps(4) infinite;
+}
+
+main .social-icons a .fa-facebook {
+  padding: 0.1rem;
+}
+
+main .social-icons a .fa-facebook:hover {
+  -webkit-animation: facebookAnim 2s infinite linear;
+          animation: facebookAnim 2s infinite linear;
+  -webkit-background-clip: text;
+  background: white;
+  border-radius: 50%;
+}
+
+main .social-icons a .fa-instagram {
+  padding: 0.1rem;
+}
+
+main .social-icons a .fa-instagram:hover {
+  -webkit-animation: instagramAnim 4s infinite linear;
+          animation: instagramAnim 4s infinite linear;
+  -webkit-background-clip: text;
+}
+
+main .social-icons a .fa-github {
+  padding: 0.1rem;
+}
+
+main .social-icons a .fa-github:hover {
+  -webkit-animation: githubAnim 2s infinite linear;
+          animation: githubAnim 2s infinite linear;
+  -webkit-background-clip: text;
+  background: white;
+  border-radius: 50%;
 }
 
 footer {
@@ -530,5 +608,165 @@ footer {
   text-align: right;
   padding: 1rem;
   color: #fff;
+}
+
+@-webkit-keyframes fly {
+  100% {
+    background-position: -142px 0;
+  }
+}
+
+@keyframes fly {
+  100% {
+    background-position: -142px 0;
+  }
+}
+
+@-webkit-keyframes instagramAnim {
+  0% {
+    color: white;
+    left: 0px;
+    top: 0px;
+  }
+  15% {
+    color: #5335cf;
+    left: 0px;
+    top: 0px;
+  }
+  30% {
+    color: #de005e;
+    left: 0px;
+    top: 0px;
+  }
+  45% {
+    color: #f66e48;
+    left: 0px;
+    top: 0px;
+  }
+  60% {
+    color: #de005e;
+    left: 0px;
+    top: 0px;
+  }
+  85% {
+    color: #5335cf;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    color: white;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes instagramAnim {
+  0% {
+    color: white;
+    left: 0px;
+    top: 0px;
+  }
+  15% {
+    color: #5335cf;
+    left: 0px;
+    top: 0px;
+  }
+  30% {
+    color: #de005e;
+    left: 0px;
+    top: 0px;
+  }
+  45% {
+    color: #f66e48;
+    left: 0px;
+    top: 0px;
+  }
+  60% {
+    color: #de005e;
+    left: 0px;
+    top: 0px;
+  }
+  85% {
+    color: #5335cf;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    color: white;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes facebookAnim {
+  0% {
+    color: #020202;
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    color: #3660b9;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    color: black;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes facebookAnim {
+  0% {
+    color: #020202;
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    color: #3660b9;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    color: black;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes githubAnim {
+  0% {
+    color: #222222;
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    color: #757683;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    color: #222222;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes githubAnim {
+  0% {
+    color: #222222;
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    color: #757683;
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    color: #222222;
+    left: 0px;
+    top: 0px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

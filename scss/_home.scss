@@ -21,7 +21,14 @@
 
     &--last {
       color: $secondary-color;
-      font-weight: 700;
+      font-weight: 100;
+    }
+  }
+
+  &__title{
+    &--2nd{
+      color: $secondary-color;
+      font-weight: 100;
     }
   }
 }

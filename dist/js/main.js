@@ -8,7 +8,9 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
+
 function toggleMenu() {
+  
   if(!showMenu) {
     hamburger.classList.add('open');
     nav.classList.add('open');
@@ -24,4 +26,22 @@ function toggleMenu() {
 
     showMenu = false;
   }
+
+}
+
+//console.log(style.getPropertyValue('--color-font-general'));
+var navbar = document.getElementById("nav");
+window.addEventListener("scroll", hideMenuOnScroll);
+
+function hideMenuOnScroll(){
+  
+  //alert("Height " +$height);
+  if (window.scrollY < 50) {
+    //alert("Hello World");
+    nav.style.top = "0";
+  }else{
+    nav.style.top = "-50vw";
+  }
+  
+
 }

@@ -15,6 +15,7 @@
   background-size: cover;
 
   h2 {
+    color: $secondary-color;
     font-size: 3rem;
     margin-bottom: 2rem;
   }
@@ -29,5 +30,10 @@
   .social-icons {
     position: initial;
     margin-top: 2rem;
+  }
+
+  &__info {
+    color: $secondary-color;
+    padding-top: 1rem;
   }
 }

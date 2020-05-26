@@ -34,6 +34,20 @@ header {
   padding: 1rem;
 }
 
+@mixin instagram-animation{
+  animation: instagramAnim 4s infinite linear;
+  -webkit-background-clip:text;
+}
+
+@mixin facebook-animation{
+  animation: facebookAnim 2s infinite linear;
+  -webkit-background-clip:text;
+}
+@mixin github-animation{
+  animation: githubAnim 2s infinite linear;
+  -webkit-background-clip:text;
+}
+
 main {
   height: 100%;
   width: 100%;
@@ -42,15 +56,51 @@ main {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
+  
+      a{
+        
+        @include transition-fast;
+        
+        position: relative;
+        animation: none;
+        .fa-twitter{
+          padding: 0.1rem;
+          &:hover{
+            color:transparent;
+            background-image: url('../img/twitter-bird-sprite.png');
+            background-size: 400%;
+            display: inline-block;
+            background-repeat: no-repeat;
+            animation: fly 0.6s steps(4) infinite;
+          }
+        }
 
-    a {
-      padding: 0.4rem;
-      @include transition-ease;
+        .fa-facebook{
+          padding: 0.1rem;
+          &:hover{
+            @include facebook-animation;
+            background: white;
+            border-radius: 50%;
+          }
+        }
 
-      &:hover {
-        color: $secondary-color;
+        .fa-instagram{
+          padding: 0.1rem;
+          &:hover{
+            @include instagram-animation;
+          }
+        }
+        .fa-github{
+          padding: 0.1rem;
+          &:hover{
+            @include github-animation;
+            background: white;
+            border-radius: 50%;
+          }
+        }
+
       }
-    }
+    
   }
 }
 
@@ -63,3 +113,33 @@ footer {
   padding: 1rem;
   color: set-text-color($primary-color);
 }
+
+@keyframes fly {
+  100% { background-position: -142px 0; }
+}
+
+@keyframes instagramAnim {
+  0% {color:white; left:0px; top:0px;}
+  15%   {color:#5335cf; left:0px; top:0px;}
+  30%  {color:#de005e; left:0px; top:0px;}
+  45%  {color:#f66e48; left:0px; top:0px;}
+  60%  {color:#de005e; left:0px; top:0px;}
+  85% {color:#5335cf; left:0px; top:0px;}
+  100% {color:white; left:0px; top:0px;}
+
+}
+
+@keyframes facebookAnim {
+  0% {color:rgb(2, 2, 2); left:0px; top:0px;}
+  50%   {color:$facebook-color; left:0px; top:0px;}
+  100% {color:rgb(0, 0, 0); left:0px; top:0px;}
+}
+
+@keyframes githubAnim {
+  0% {color:rgb(34, 34, 34); left:0px; top:0px;}
+  50%   {color:$github-color; left:0px; top:0px;}
+  100% {color:rgb(34, 34, 34); left:0px; top:0px;}
+}
+
+
+

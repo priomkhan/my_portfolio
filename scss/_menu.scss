@@ -33,7 +33,7 @@
       top: 8px;
       width: 20px;
       height: 3px;
-      background: set-text-color($primary-color);
+      background: $secondary-color;
       @include transition-ease;
     }
 
@@ -43,6 +43,8 @@
 
       &::before {
         transform: rotate(45deg) translate(5px, 8px);
+        background: $secondary-color;
+
       }
 
       &::after {
@@ -58,12 +60,14 @@
   top: 0;
   left: 0;
   width: 100vw;
+  height: 10vw;
   opacity: 0.98;
   visibility: hidden;
 
   &.open {
     visibility: visible;
   }
+  
 
   .menu-nav {
     display: flex;

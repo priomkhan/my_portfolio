@@ -11,11 +11,11 @@
         rgba($primary-color, 0.3)
       ),
       url('../img/model-1.jpg') center top;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
 
     .text-secondary {
       font-size: 2rem;
@@ -25,7 +25,7 @@
 
   &__items {
     width: 60vw;
-    margin: 2rem auto 0 auto;
+    margin: 4rem auto 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
@@ -33,7 +33,7 @@
 
   &__item {
     position: relative;
-    border-bottom: 5px solid $secondary-color;
+    border-bottom: 1px solid $secondary-color;
     overflow: hidden;
     cursor: pointer;
 
@@ -58,11 +58,17 @@
         top: 0;
         opacity: 0.9;
       }
+      .projects__ongoing{
+        opacity: 1;
+      }
       .projects__btn {
         opacity: 1;
       }
+
     }
   }
+
+
 
   &__btns {
     position: absolute;
@@ -83,8 +89,22 @@
 
     &:hover {
       color: set-text-color(set-text-color($secondary-color));
+
+    }
+    
+  }
+
+  &__ongoing{
+    opacity: 0;
+    color: set-text-color($secondary-color);
+    @include transition-ease;
+
+    &:hover {
+      color: set-text-color($ongoing-color);
+
     }
   }
+
 
   .social-icons {
     display: flex;
